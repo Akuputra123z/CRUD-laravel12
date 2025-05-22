@@ -17,11 +17,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
     Route::resource('posts', PostController::class);
     Route::resource('categories', CategoryController::class);
-    Route::resource('products', ProductController::class);
-    Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
-    Route::post('products', [ProductController::class, 'store'])->name('products.store');
-    Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
-   
     
 });
 
